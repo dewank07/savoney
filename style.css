@@ -341,6 +341,44 @@ nav.close ~ .dashboard .top{
 .boxes .box.box3{
     background-color: var(--box3-color);
 }
+.transactions{
+    padding: 1rem;
+}
+.transactions .box{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 100%;
+    /* margin: 1rem;    */
+    border-radius: 2rem;
+
+}
+.transactions .box p{
+    text-align: center;
+    padding-top: 1rem;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: var(--panel-color);
+    border-radius: 2rem;
+}
+.transactions .box ul{
+    padding: 1rem;
+    height: 430px;
+    overflow-y: scroll;
+    list-style: none;
+}
+.transactions .box ul li{
+    background-color: #e6e5e5;
+    padding: 0.5rem;
+    height: 4rem;
+    font-size: 15px;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+.transactions .box ul li .color{
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+
 
 @media (max-width: 1000px) {
     nav{

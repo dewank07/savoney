@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!--=== Coding by CodingLab | www.codinglabweb.com === -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -106,17 +105,17 @@
                     <div class="box box1">
                         <i class="uil uil-thumbs-up"></i>
                         <span class="text">Total Balance</span>
-                        <span class="number">50,120</span>
+                        <span class="number" id="DasBal">50,120</span>
                     </div>
                     <div class="box box2">
                         <i class="uil uil-comments"></i>
                         <span class="text">Total Income</span>
-                        <span class="number">20,120</span>
+                        <span class="number" id="DasIn">20,120</span>
                     </div>
                     <div class="box box3">
                         <i class="uil uil-share"></i>
                         <span class="text">Total Expense</span>
-                        <span class="number">10,120</span>
+                        <span class="number" id="DasEx">10,120</span>
                     </div>
                 </div>
             </div>
@@ -133,7 +132,7 @@
             </div>
         </div>
         <div class="container">
-            <form action="#">
+            <form action="#" id="incomeForm">
                 <div class="form first">
                     <div class="details personal">
                         <span class="title">Income Details</span>
@@ -142,40 +141,45 @@
                             
                             <div class="input-field">
                                 <label>Amount</label>
-                                <input type="number" placeholder="Enter amount" required>
+                                <input type="number" id="inAmt" placeholder="Enter amount" required>
                             </div>
     
                             
                             <div class="input-field">
                                 <label>Date</label>
-                                <input type="date" placeholder="Enter birth date" required>
+                                <input type="date" id="inDate" placeholder="Enter birth date" required>
                             </div>
     
                             <div class="input-field">
                                 <label>Remarks</label>
-                                <input type="text" placeholder="Enter your name" required>
+                                <input type="text" id="inRem" placeholder="Enter your name" required>
                             </div>
     
                             <div class="input-field">
                                 <label>Type of source</label>
-                                <select required>
+                                <select required id="inType">
                                     <option disabled selected>Select Type</option>
-                                    <option>Earning</option>
-                                    <option>Savings</option>
-                                    <option>Others</option>
+                                    <option value="Earning">Earning</option>
+                                    <option value="Savings">Savings</option>
+                                    <option value="others">Others</option>
                                 </select>
                             </div>
                         </div>
                     </div>
     
                         <button class="nextBtn">
-                            <span class="btnText">Next</span>
+                            <span class="btnText">Add</span>
                             <i class="uil uil-navigator"></i>
                         </button>
                 </div>
             </form>
             <div class="transactions">
-                <p>idhr transactions aayegi</p>
+                <div class="box">
+                <p>Transactions History</p>
+                <ul id="incomeChk">
+                    <!-- <li><span class="color">$1000</span> from <span class="color">Freelance</span> on <span class="color">24/03/2023</span> as earning</li> -->
+                </ul>
+                </div>
             </div>
             <div class="charts">
                 <img src="https://h5p.org/sites/default/files/styles/medium-logo/public/logos/chart-icon-color.png?itok=kpLTYHHJ" alt="">
@@ -254,7 +258,7 @@
             </div>
         </div>
         <div class="container">
-            <form action="#">
+            <form action="#" id="expenseForm">
                 <div class="form first">
                     <div class="details personal">
                         <span class="title">Personal Details</span>
@@ -263,27 +267,27 @@
                             
                             <div class="input-field">
                                 <label>Income</label>
-                                <input type="number" placeholder="Enter mobile number" required>
+                                <input type="number" id="exAmt" placeholder="Enter mobile number" required>
                             </div>
     
                             
                             <div class="input-field">
                                 <label>Date</label>
-                                <input type="date" placeholder="Enter birth date" required>
+                                <input type="date" id="exDate" placeholder="Enter birth date" required>
                             </div>
     
                             <div class="input-field">
                                 <label>Remarks</label>
-                                <input type="text" placeholder="Enter your name" required>
+                                <input type="text" id="exRem" placeholder="Enter your name" required>
                             </div>
     
                             <div class="input-field">
                                 <label>Type of source</label>
-                                <select required>
+                                <select required id="exType">
                                     <option disabled selected>Select Type</option>
-                                    <option>Earning</option>
-                                    <option>Savings</option>
-                                    <option>Others</option>
+                                    <option value="Earning">Earning</option>
+                                    <option value="Savings">Savings</option>
+                                    <option value="others">Others</option>
                                 </select>
                             </div>
                         </div>
@@ -295,7 +299,14 @@
                         </button>
                 </div>
             </form>
-            <div class="transactions"></div>
+            <div class="transactions">
+                <div class="box">
+                    <p>Transactions History</p>
+                    <ul id="expenseChk">
+                        <!-- <li><span class="color">$1000</span> from <span class="color">Freelance</span> on <span class="color">24/03/2023</span> as earning</li> -->
+                    </ul>
+                    </div>
+            </div>
             <div class="charts">
                 <img src="https://h5p.org/sites/default/files/styles/medium-logo/public/logos/chart-icon-color.png?itok=kpLTYHHJ" alt="">
             </div>
@@ -308,5 +319,6 @@
 
     <script src="script.js"></script>
     <script src="./assests/script.js"></script>
+    <script src="./assests/heavy.js"></script>
 </body>
 </html>

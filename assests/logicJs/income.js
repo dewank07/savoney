@@ -1,12 +1,17 @@
 class Income {
   constructor() {
+
     // initial values
     this.income = this.calculateCategory('income');
+    
     // this.incomeCategories = this.getStorageItem('incomeCategories');
     this.budget = this.calculateCategory('budget'); //add a new method to calc budget from storage values
+    
     // this.budgetCategories = this.getStorageItem('budgetCategories');
     this.savings = this.income - this.budget;
+    
     this.incomeCategories = this.getIncomeCategories();
+    
     this.budgetCategories = this.getBudgetCategories();
 
     // ui components
