@@ -1,9 +1,12 @@
 
     window.onload = () => {
+
         incomeJson = (JSON.parse(localStorage.getItem("Income"))) || [];
         budgetJson = (JSON.parse(localStorage.getItem("Budget"))) || [];
         expenseJson = (JSON.parse(localStorage.getItem("Expense"))) || [];
         totalVal = (JSON.parse(localStorage.getItem("TotalVal"))) || [0,0,0];
+
+        // O-----O------O------O
 
         dashBalance = document.getElementById("DasBal");
         dashIncome = document.getElementById("DasIn");
@@ -14,6 +17,7 @@
         dashBalance.innerHTML = Number(totalVal[0]);
 
 
+        // O-----O------O------O
 
         incomeJson.forEach(task => {
             console.log("hi");
@@ -24,6 +28,8 @@
             inAppend.insertBefore(li, inAppend.children[0]);    
         });
 
+        // O-----O------O------O
+        
         expenseJson.forEach(task => {
             console.log("hi");
             const exAppend = document.getElementById("expenseChk");
@@ -39,14 +45,16 @@
     
     // x---------x----------x----------x-----------x----------x--------x
     
-    function updateBalance(){
-        
-        totalVal[0] = Number(totalVal[0]) + Number(totalVal[1]) - Number(totalVal[2]);
-        console.log(totalVal[2]);
+    function updateBalance(val){
+        console.log("Update Balance")
+        totalVal[0] = Number(totalVal[0]) + val;
+        console.log(totalVal[0]);
         dashBalance.innerHTML = Number(totalVal[0]);
         localStorage.setItem("TotalVal", JSON.stringify(totalVal));
 
     }
+
+        // O-----O------O------O
 
     function getDate() {
         var today = new Date();
@@ -62,9 +70,16 @@
             mm = '0'+mm
         } 
       
-        today = yyyy + '/' + mm + '/' + dd;
+        today =  dd+'-'+mm+'-'+yyyy;
         console.log(today);
-        document.getElementById("inDate").innerHTML = today;
+        // document.getElementById("inDate").innerHTML = today;
+      }
+
+
+      function clearLocal(){
+        console.log("ih")
+        window.localStorage.clear();
+        location.reload();
       }
 
     // x---------x----------x----------x-----------x----------x--------x
@@ -92,10 +107,11 @@
             type   : typ.value
         }
         
+        console.log("Update Income")
         totalVal[1] = Number(totalVal[1]) + Number(amt.value);
         console.log(totalVal[1]);
         dashIncome.innerHTML  = Number(totalVal[1]);
-        updateBalance();
+        updateBalance(Number(amt.value));
 
 
         incomeJson.push(incomeArray);
@@ -131,10 +147,12 @@
             type   : typ.value
         }
 
+        console.log("Update expense")
         totalVal[2] = Number(totalVal[2]) + Number(amt.value);
         console.log(totalVal[2]);
         dashExpense.innerHTML = Number(totalVal[2]);
-        updateBalance();
+        let expns = -Number(amt.value);  
+        updateBalance(expns);
         expenseJson.push(expenseArray);
         appendExpense(expenseArray);
         localStorage.setItem("Expense", JSON.stringify(expenseJson));
@@ -145,6 +163,10 @@
 
     // x--------x-------------x------------x--------------x------------x
 
+
+    // set Budget
+
+    
 
 
 

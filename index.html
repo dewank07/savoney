@@ -51,9 +51,9 @@
             </ul>
             
             <ul class="logout-mode">
-                <li><a href="#">
+                <li><a href="#"   onclick="clearLocal()">
                     <i class="uil uil-signout"></i>
-                    <span class="link-name">Logout</span>
+                    <span class="link-name">Clear</span>
                 </a></li>
 
                 <li class="mode">
@@ -198,7 +198,7 @@
             </div>
         </div>
         <div class="container">
-            <form action="#">
+            <form action="#" id="budForm">
                 <div class="form first">
                     <div class="details personal">
                         <span class="title">Personal Details</span>
@@ -210,26 +210,10 @@
                                 <input type="number" placeholder="Enter mobile number" required>
                             </div>
     
-                            
-                            <div class="input-field">
-                                <label>Date</label>
-                                <input type="date" placeholder="Enter birth date" required>
-                            </div>
-    
                             <div class="input-field">
                                 <label>Remarks</label>
                                 <input type="text" placeholder="Enter your name" required>
-                            </div>
-    
-                            <div class="input-field">
-                                <label>Type of source</label>
-                                <select required>
-                                    <option disabled selected>Select Type</option>
-                                    <option>Earning</option>
-                                    <option>Savings</option>
-                                    <option>Others</option>
-                                </select>
-                            </div>
+                            </div>    
                         </div>
                     </div>
     
