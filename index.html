@@ -73,13 +73,6 @@
 
     <!-- home -->
     <section class="home" id="home">
-
-    </section>
-    <!-- home end -->
-
-    <!-- dashboard -->
-    <section class="dashboard" id="dashboard">
-        
         <div class="top">
             <i class="uil uil-bars sidebar-toggle"></i>
 
@@ -92,14 +85,22 @@
             
         </div>
 
-        <div class="dash-content">
+    </section>
+    <!-- home end -->
+
+    <!-- dashboard -->
+    <section class="dashboard" id="dashboard">
+        
+       
+
+        <div class="dash-content static">
             <div class="overview ">
 
-                <div class="title">
+                <!-- <div class="title">
                     <i class="uil uil-tachometer-fast-alt"></i>
                     <span class="text">Dashboard</span>
                     
-                </div>
+                </div> -->
 
                 <div class="boxes ">
                     <div class="box box1">
@@ -182,7 +183,8 @@
                 </div>
             </div>
             <div class="charts">
-                <img src="https://h5p.org/sites/default/files/styles/medium-logo/public/logos/chart-icon-color.png?itok=kpLTYHHJ" alt="">
+                <canvas id="incomeChart"></canvas>
+                <!-- <img src="https://h5p.org/sites/default/files/styles/medium-logo/public/logos/chart-icon-color.png?itok=kpLTYHHJ" alt=""> -->
             </div>
         </div>
     
@@ -197,7 +199,7 @@
                 <span class="text">Budget</span>
             </div>
         </div>
-        <div class="container">
+        <div class="container container-budget">
             <form action="#" id="budForm">
                 <div class="form first">
                     <div class="details personal">
@@ -206,13 +208,13 @@
                         <div class="fields">
                             
                             <div class="input-field">
-                                <label>Income</label>
-                                <input type="number" placeholder="Enter mobile number" required>
+                                <label>Budget</label>
+                                <input type="text" id="buAmt" placeholder="Enter Amount" required>
                             </div>
     
                             <div class="input-field">
-                                <label>Remarks</label>
-                                <input type="text" placeholder="Enter your name" required>
+                                <label>type</label>
+                                <input id="buRem" type="text" placeholder="Enter type" required>
                             </div>    
                         </div>
                     </div>
@@ -223,9 +225,18 @@
                         </button>
                 </div>
             </form>
-            <div class="transactions"></div>
-            <div class="charts">
-                <img src="https://h5p.org/sites/default/files/styles/medium-logo/public/logos/chart-icon-color.png?itok=kpLTYHHJ" alt="">
+            <div class="budgetTrans">
+                <div class="box">
+                    <p>Transactions History</p>
+                    <ul id="budgetChk">
+                        <li>
+                            <!-- <p class="inLi">Transactions History</p>
+                            <div class="bar">
+                                <div class="bar-color" style="width: 20%;"></div>
+                            </div> -->
+                        </li>
+                    </ul>
+                    </div>
             </div>
         </div>
     
@@ -269,9 +280,6 @@
                                 <label>Type of source</label>
                                 <select required id="exType">
                                     <option disabled selected>Select Type</option>
-                                    <option value="Earning">Earning</option>
-                                    <option value="Savings">Savings</option>
-                                    <option value="others">Others</option>
                                 </select>
                             </div>
                         </div>
@@ -292,17 +300,18 @@
                     </div>
             </div>
             <div class="charts">
-                <img src="https://h5p.org/sites/default/files/styles/medium-logo/public/logos/chart-icon-color.png?itok=kpLTYHHJ" alt="">
+
+                <canvas id="expenseChart"></canvas>
+                <!-- <img src="https://h5p.org/sites/default/files/styles/medium-logo/public/logos/chart-icon-color.png?itok=kpLTYHHJ" alt=""> -->
             </div>
         </div>
     
     </section>
     <!-- expense end -->
 
-
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <script src="script.js"></script>
-    <script src="./assests/script.js"></script>
+    <!-- <script src="./assests/script.js"></script>  -->
     <script src="./assests/heavy.js"></script>
 </body>
 </html>
