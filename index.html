@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<title>Sidebar Menu | Side Navigation Bar</title>-->
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="home.css">
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+  </head>
+  <body>
+
+    <!-- navbar -->
+    <nav>
+      <div class="logo">
+        <i class="bx bx-menu menu-icon"></i>
+        <span class="logo-name">Savoney</span>
+      </div>
+      <div class="sidebar">
+        <div class="logo">
+          <i class="bx bx-menu menu-icon"></i>
+          <span class="logo-name">Savoney</span>
+        </div>
+
+        <div class="sidebar-content">
+          <ul class="lists">
+            <li class="list">
+              <a href="#" class="nav-link">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="link">Dashboard</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#income" class="nav-link">
+                <i class="bx bx-bar-chart-alt-2 icon"></i>
+                <span class="link">Income</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="nav-link">
+                <i class="bx bx-bell icon"></i>
+                <span class="link">Budget</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="nav-link">
+                <i class="bx bx-message-rounded icon"></i>
+                <span class="link">Expense</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="nav-link" onclick="clearLocal()">
+                <i class="bx bx-pie-chart-alt-2 icon"></i>
+                <span class="link">Reset</span>
+              </a>
+            </li>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar -->
+    
+     <main class="mainStart">
+        <section class="home" id="Home">
+            <div class="hero">
+              <h1>Welcome to <br> <span class="decor">SAVONEY</span> </h1>
+            </div>
+        </section>
+
+        <!-- DashBoard -->
+        <section class="Dashboard" id="dashboard">
+
+          <div class="dash-content static">
+            <div class="overview ">
+
+                <div class="boxes ">
+                    <div class="box box1">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="text">Total Balance</span>
+                        <span class="number" id="DasBal">50,120</span>
+                    </div>
+                    <div class="box box2">
+                        <i class="uil uil-comments"></i>
+                        <span class="text">Total Income</span>
+                        <span class="number" id="DasIn">20,120</span>
+                    </div>
+                    <div class="box box3">
+                        <i class="uil uil-share"></i>
+                        <span class="text">Total Expense</span>
+                        <span class="number" id="DasEx">10,120</span>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+        </section>
+
+        <!-- Income -->
+        <section class="income" id="income">
+          <div class="container">
+            <div class="form">
+              <div class="heading">
+                <i class="uil uil-tachometer-fast-alt"></i>
+                <span>Income Details</span>            
+              </div>
+              <div class="line"></div>
+
+              <form action="#" id="incomeForm">
+                    <div class="details">
+                        <!-- <span class="title">Income Details</span> -->
+
+                        <div class="fields">
+                            
+                            <div class="input-field">
+                                <label>Amount</label>
+                                <input type="number" id="inAmt" placeholder="Enter amount" required>
+                            </div>
+
+                            
+                            <div class="input-field">
+                                <label>Date</label>
+                                <input type="date" id="inDate" placeholder="Enter birth date" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Remarks</label>
+                                <input type="text" id="inRem" placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Type of source</label>
+                                <select required id="inType">
+                                    <option disabled selected>Select Type</option>
+                                    <option value="Earning">Earning</option>
+                                    <option value="Savings">Savings</option>
+                                    <option value="others">Others</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                        <button class="nextBtn">
+                            <span class="btnText">Add</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+            </form>
+            </div>
+            <div class="trans">
+              <div class="box">
+                <div class="heading">
+                  <i class="uil uil-tachometer-fast-alt"></i>
+                  <span>Income History</span>            
+                </div>
+                <div class="line"></div>
+                <ul class = "listTrans" id="incomeChk">
+                  <!-- <li><span class="color">$1000</span> from <span class="color">Freelance</span> on <span class="color">24/03/2023</span> as earning</li> -->
+                </ul>
+                <!-- <div class="title"></div> -->
+                <!-- <div class="content"></div> -->
+              </div>
+            </div>
+            <div class="chart">
+              
+              <div class="heading">
+                <i class="uil uil-tachometer-fast-alt"></i>
+                <span>Income Chart</span>            
+              </div>
+              <div class="line"></div>
+
+              <canvas id="incomeChart"></canvas>
+              <!-- <canvas></canvas> -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Budget -->
+        <section class="budget" id="budget">
+          <div class="container">
+            <div class="form">
+              <div class="heading">
+                <i class="uil uil-tachometer-fast-alt"></i>
+                <span>Budget Details</span>            
+              </div>
+              <div class="line"></div>
+
+              <form action="#" id="budForm">
+                    <div class="details">
+                        <!-- <span class="title">Personal Details</span> -->
+
+                        <div class="fields">
+                            
+                            <div class="input-field">
+                                <label>Budget</label>
+                                <input type="text" id="buAmt" placeholder="Enter Amount" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>type</label>
+                                <input id="buRem" type="text" placeholder="Enter type" required>
+                            </div>    
+                        </div>
+                    </div>
+
+                        <button class="nextBtn">
+                            <span class="btnText">Next</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                
+            </form>
+            </div>
+            <div class="trans">
+              <div class="box">
+                <div class="heading">
+                  <i class="uil uil-tachometer-fast-alt"></i>
+                  <span>Budget list</span>            
+                </div>
+                <div class="line"></div>
+                
+                <ul class= "budList" id="budgetChk">
+                  <!-- <li>
+                    <p class="inLi">Transactions History</p>
+                      <div class="bar">
+                          <div class="bar-color" style="width: 20%;"></div>
+                      </div>
+                  </li> -->
+              </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Expense -->
+        <section class="expense" id="expense">
+          <div class="container">
+            <div class="form">
+              <div class="heading">
+                <i class="uil uil-tachometer-fast-alt"></i>
+                <span>Expense Details</span>            
+              </div>
+              <div class="line"></div>
+
+              <form action="#" id="expenseForm">
+                    <div class="details">
+                        <!-- <span class="title">Personal Details</span> -->
+
+                        <div class="fields">
+                            
+                            <div class="input-field">
+                                <label>Income</label>
+                                <input type="number" id="exAmt" placeholder="Enter mobile number" required>
+                            </div>
+
+                            
+                            <div class="input-field">
+                                <label>Date</label>
+                                <input type="date" id="exDate" placeholder="Enter birth date" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Remarks</label>
+                                <input type="text" id="exRem" placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="input-field">
+                                <label>Type of source</label>
+                                <select required id="exType">
+                                    <option disabled selected>Select Type</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                        <button class="nextBtn">
+                            <span class="btnText">Next</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                
+            </form>
+            </div>
+            
+            <div class="trans">
+              <div class="box">
+                <div class="heading">
+                  <i class="uil uil-tachometer-fast-alt"></i>
+                  <span>Expense History</span>            
+                </div>
+                <div class="line"></div>
+                <ul class = "listTrans" id="expenseChk">
+                  <!-- <li><span class="color">$1000</span> from <span class="color">Freelance</span> on <span class="color">24/03/2023</span> as earning</li> -->
+                </ul>
+                <!-- <div class="title"></div> -->
+                <!-- <div class="content"></div> -->
+              </div>
+            </div>
+            <div class="chart">
+              <div class="heading">
+                <i class="uil uil-tachometer-fast-alt"></i>
+                <span>Expense Chart</span>            
+              </div>
+              <div class="line"></div>
+              <canvas id="expenseChart"></canvas>
+
+            </div>
+          </div>
+        </section>
+      </main>
+    
+
+    <script>
+      const navBar = document.querySelector("nav"),
+        menuBtns = document.querySelectorAll(".menu-icon"),
+        overlay = document.querySelector(".overlay");
+
+      menuBtns.forEach((menuBtn) => {
+        menuBtn.addEventListener("click", () => {
+          navBar.classList.toggle("open");
+        });
+      });
+
+      overlay.addEventListener("click", () => {
+        navBar.classList.remove("open");
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script src="./logic.js"></script>
+  </body>
+</html>
+

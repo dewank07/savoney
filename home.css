@@ -1,0 +1,250 @@
+
+:root{
+    --primary-color : #A05AFF;
+    --secondary-color : #1BCFB4;
+    --support-1 : #4BCBEB;
+    --support-2 : #FE9496;
+    --support-3 : #9E58FF;
+    --white  : #fff;
+    --text-1 : #333;
+    --gradient-1 : linear-gradient(90deg, rgba(254,148,150,1) 0%, rgba(255,0,87,1) 100%);;
+    --gradient-2 : linear-gradient(90deg, rgba(75,203,235,1) 0%, rgba(0,121,255,1) 100%);
+    --gradient-3 : linear-gradient(90deg, rgba(78,255,228,1) 0%, rgba(0,139,109,1) 100%);
+
+}
+.home{
+    height: 100vh;
+    width: 100vw;
+    padding: .5rem;
+}
+.home .hero{
+    font-size: 2rem;
+    color: var(--text-1);
+    z-index: -2;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+/* ----------- income ------------- */
+.income{
+    width: 100vw;
+}
+
+.income .container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;   
+    padding: .65rem;
+}
+.income .container .form, 
+.income .container .trans, 
+.income .container .chart{
+    height: 100vh;
+    background-color: var(--white);
+    width: 100%;
+    /* border-radius: 2rem; */
+    align-content: center;
+}
+ .container .form .heading,
+ .container .trans .heading,
+ .container .chart .heading{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: left;
+    align-items: center;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+.heading span{
+    font-weight: 700;
+}
+.heading i{
+    background-color: var(--primary-color);
+    color: var(--white);
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    border-radius: .5rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.line{
+    max-width: 100%;
+    background-color: #333;
+    height: 1.5px;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+.container .form form{
+    /* background-color: #333; */
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .form form .details .fields{
+        display: flex;
+        align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+} 
+.container .form form .details .fields .input-field{
+    display: flex;
+        width: calc(100% - 20px);
+        flex-direction: column;
+        margin: .75rem 0;
+}
+
+.fields .input-field label{
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+.fields .input-field input,.fields .input-field select{
+    padding: .5rem;
+    border-radius: .4rem;    
+    border-color: var(--primary-color);
+    border-width: 1px;
+
+}
+
+.container .form form .nextBtn{
+    width: 15rem;
+    height: 2rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    border-width: 0;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 500;
+}
+
+.listTrans{
+    font-size: .8rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 100vh;
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.listTrans li{
+    list-style: none;
+    background-color: var(--secondary-color);
+    width: 90%;
+    margin: 0 auto;
+    padding: .2rem .6rem;
+    border-radius: 1rem;
+    color: var(--white);
+    font-weight: 500;
+}
+.listTrans li span{
+    color: var(--text-1);
+    font-weight: 700;
+}
+.budList li{
+    list-style: none;
+    /* background-color: var(--secondary-color); */
+    width: 90%;
+    margin: 0 auto;
+    padding: .2rem .6rem;
+    border-radius: 1rem;
+    color: var(--text-1);
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.budList li .bar{
+    width: 100%;
+    background-color: #e6e5e5;
+    padding: 0.25rem ;
+    height: 0.8rem;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+}
+
+.budList li .bar .bar-color{
+    background-color: orange;
+    border-radius: 1rem;
+    height: 0.5rem;
+
+}
+
+/* ----------- income ------------- */
+
+/* ----------- Budget ------------- */
+.budget{
+    width: 100vw;
+}
+
+.budget .container{
+    /* background-color: aquamarine; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;   
+    padding: .65rem;
+}
+.budget .container .form,
+.budget .container .trans,
+.budget .container .chart{
+    height: 100vh;
+    background-color: var(--white);
+    width: 100%;
+    /* border-radius: 2rem; */
+    align-content: center;
+}
+.budget .container .form h1,
+.budget .container .trans h1,
+.budget .container .chart h1{
+    text-align: center;
+    
+}
+
+/* ----------- income ------------- */
+
+
+/* ----------- expense ------------- */
+.expense{
+    width: 100vw;
+}
+
+.expense .container{
+    /* background-color: aquamarine; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;   
+    padding: .65rem;
+}
+.expense .container .form,
+.expense .container .trans,
+.expense .container .chart{
+    height: 100vh;
+    background-color: var(--white);
+    width: 100%;
+    /* border-radius: 2rem; */
+    align-content: center;
+}
+.expense .container .form h1,
+.expense .container .trans h1,
+.expense .container .chart h1{
+    text-align: center;
+    
+}
+
+/* ----------- expense ------------- */
