@@ -1,6 +1,6 @@
 
 :root{
-    --primary-color : #A05AFF;
+    --primary-color : #4070f4;
     --secondary-color : #1BCFB4;
     --support-1 : #4BCBEB;
     --support-2 : #FE9496;
@@ -10,12 +10,15 @@
     --gradient-1 : linear-gradient(90deg, rgba(254,148,150,1) 0%, rgba(255,0,87,1) 100%);;
     --gradient-2 : linear-gradient(90deg, rgba(75,203,235,1) 0%, rgba(0,121,255,1) 100%);
     --gradient-3 : linear-gradient(90deg, rgba(78,255,228,1) 0%, rgba(0,139,109,1) 100%);
-
 }
 .home{
     height: 100vh;
     width: 100vw;
     padding: .5rem;
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 19px ), repeating-linear-gradient( #444cf755, #444cf7 );
+    
 }
 .home .hero{
     font-size: 2rem;
@@ -49,6 +52,9 @@
     /* border-radius: 2rem; */
     align-content: center;
 }
+
+
+/* ---------------- Common -------------- */
  .container .form .heading,
  .container .trans .heading,
  .container .chart .heading{
@@ -182,6 +188,91 @@
 
 }
 
+
+
+
+.Dashboard{
+    width: 100vw;
+}
+.dash-content{
+    background-color: var(--white);
+    height: 100vh;
+    margin: 0 .65rem;
+    overflow-y: scroll;
+
+}
+.dash-content .overview{
+    display: flex;
+    font-size: .9rem;
+    justify-content: center;
+    height: 80%;
+    align-items: center;
+}
+.dash-content .overview .boxes{
+    margin-top: 1rem;
+    flex-direction: column;
+    display: flex;
+}
+.dash-content .overview .boxes .boxa{
+
+    background-color: #4070f4;
+    padding: 1rem 4rem;
+    margin: .5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dash-content .overview .boxes .boxa i{
+    font-size: 2rem;
+    color: var(--white);
+}
+.dash-content .overview .boxes .boxa .text{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+}
+.dash-content .overview .boxes .boxa .number{
+    margin-top: .5rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--white);
+}
+
+.heading{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: left;
+    align-items: center;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+.heading span{
+    font-weight: 700;
+}
+.heading i{
+    background-color: var(--primary-color);
+    color: var(--white);
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    border-radius: .5rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.line{
+    max-width: 100%;
+    background-color: #333;
+    height: 1.5px;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+
 /* ----------- income ------------- */
 
 /* ----------- Budget ------------- */
@@ -214,7 +305,6 @@
     
 }
 
-/* ----------- income ------------- */
 
 
 /* ----------- expense ------------- */
