@@ -1,4 +1,5 @@
 
+
 TypeMap = new Map();
 
     window.onload = () => {
@@ -305,6 +306,7 @@ TypeMap = new Map();
           data: data,
           options: {
             responsive: true,
+            maintainAspectRatio : true,
             plugins: {
               legend: {
                 position: 'top',
@@ -318,6 +320,8 @@ TypeMap = new Map();
         };
     
         const myChart = new Chart(incomeChart, config);
+        
+        
         // const myChart2 = new Chart(this.summaryIncomeChart, config);
       }
     
