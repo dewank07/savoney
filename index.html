@@ -9,12 +9,9 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="home.css">
     <!-- Boxicons CSS -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
   </head>
   <body>
 
@@ -70,8 +67,9 @@
     
      <main class="mainStart">
         <section class="home" id="Home">
+          
             <div class="hero">
-              <h1>Welcome to <br> <span class="decor">SAVONEY</span> </h1>
+              <h1>Welcome to <span class="decor">SAVONEY</span> </h1>
             </div>
         </section>
 
@@ -79,12 +77,12 @@
         <section class="Dashboard" id="dashboard">
 
           <div class="dash-content">
-            <div class="heading">
+            <div class="heading" data-aos="fade-right">
               <i class="uil uil-tachometer-fast-alt"></i>
               <span>DashBoard</span>            
             </div>
             <div class="line"></div>
-            <div class="overview ">
+            <div class="overview" data-aos="fade-right">
 
                 <div class="boxes ">
                     <div class="boxa box1">
@@ -111,8 +109,8 @@
         <!-- Income -->
         <section class="income" id="income">
           <div class="container">
-            <div class="form">
-              <div class="heading">
+            <div class="form" data-aos="fade-right">
+              <div class="heading" data-aos="fade-right">
                 <i class="uil uil-tachometer-fast-alt"></i>
                 <span>Income Details</span>            
               </div>
@@ -158,9 +156,9 @@
                         </button>
             </form>
             </div>
-            <div class="trans">
+            <div class="trans" data-aos="fade-right">
               <div class="box">
-                <div class="heading">
+                <div class="heading" data-aos="fade-right">
                   <i class="uil uil-tachometer-fast-alt"></i>
                   <span>Income History</span>            
                 </div>
@@ -173,9 +171,9 @@
               </div>
             </div>
             
-            <div class="chart">
+            <div class="chart" data-aos="fade-right">
               
-              <div class="heading">
+              <div class="heading" data-aos="fade-right">
                 <i class="uil uil-tachometer-fast-alt"></i>
                 <span>Income Chart</span>            
               </div>
@@ -191,7 +189,7 @@
         <!-- Budget -->
         <section class="budget" id="budget">
           <div class="container">
-            <div class="form">
+            <div class="form" data-aos="fade-right">
               <div class="heading">
                 <i class="uil uil-tachometer-fast-alt"></i>
                 <span>Budget Details</span>            
@@ -223,7 +221,7 @@
                 
             </form>
             </div>
-            <div class="trans">
+            <div class="trans" data-aos="fade-right">
               <div class="box">
                 <div class="heading">
                   <i class="uil uil-tachometer-fast-alt"></i>
@@ -247,7 +245,7 @@
         <!-- Expense -->
         <section class="expense" id="expense">
           <div class="container">
-            <div class="form">
+            <div class="form" data-aos="fade-right">
               <div class="heading">
                 <i class="uil uil-tachometer-fast-alt"></i>
                 <span>Expense Details</span>            
@@ -293,7 +291,7 @@
             </form>
             </div>
             
-            <div class="trans">
+            <div class="trans" data-aos="fade-right">
               <div class="box">
                 <div class="heading">
                   <i class="uil uil-tachometer-fast-alt"></i>
@@ -307,7 +305,7 @@
                 <!-- <div class="content"></div> -->
               </div>
             </div>
-            <div class="chart">
+            <div class="chart" data-aos="fade-right">
               <div class="heading">
                 <i class="uil uil-tachometer-fast-alt"></i>
                 <span>Expense Chart</span>            
@@ -322,7 +320,9 @@
       </main>
     
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+      AOS.init();
       const navBar = document.querySelector("nav"),
         menuBtns = document.querySelectorAll(".menu-icon"),
         overlay = document.querySelector(".overlay");
