@@ -103,6 +103,7 @@ TypeMap = new Map();
             console.log(tag);
 
             if(calWid > 100){
+                tag.setAttribute("style", `width:100%;`)
                 alert("Budget Exceeded");
             }
             else{
