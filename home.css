@@ -17,10 +17,10 @@
     padding: .5rem;
     background-color: #e5e5f7;
     opacity: 1;
-    background-image:  url(./stacked-waves-haikei.svg);
+    background-image:  url(./assessts/bg916.svg);
     background-repeat: no-repeat;
     background-position-y: bottom;
-    background-size:cover;
+    background-size:cover;  
 }
 .home .hero{
     font-size: 2rem;
@@ -344,6 +344,10 @@
 
 @media (min-width : 1024px) {
 
+    .home{
+        background-image:  url(./assessts/bg169.svg);
+        background-size:cover;
+    }
     .home .hero{
         font-size: 3rem;
     }
